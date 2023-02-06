@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaving The City - Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Licorice&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Stylesheets/contact_style.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        type="text/css">
+
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    
+</head>
+
+
+<body onload="makeDark()">
+    <div id="trim">
+        <!--Div just for styling with green trim-->
+    </div>
+    <!--Nav bar with logo and links as a list-->
+    <nav>
+        <div id="nav_contents">
+            <div id="nav_logo" class="nav_item">
+                <a href="#"><i class="fa-solid fa-leaf"></i></a>
+            </div>
+            <div id="nav_list" class="nav_item">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="dark_list"><input type="checkbox" id="toggle"><label for="toggle"></label></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="nav_space">
+        <!--Empty div to hold nav space when fully scrolled up - will be same height as nav + trim-->
+    </div>
+
+    <div id="title_section">
+        <!--Background of this div to be different image to home-->
+        <div id="title_holder">
+            <h1>Contact Us</h1>
+        </div>
+    </div>
+
+    <!--Website content and holder div (for styling)-->
+    <div id="website_body">
+        <div id="website_content">
+
+            <!--Contact form-->
+            <div id="contact_holder">
+                <div id="contact_title">
+                    <h2>We'd love to hear from you</h2>
+                    <h3>Leave us a message below!</h3>
+                </div>
+                <div id="contact_form_div">
+                    <form id="contact_form_form" action="https://formsubmit.co/sandra.skmn@gmail.com" method="POST">
+                        <div id="short_inputs">
+                            <div id="name_form" class="form_heading short">
+                                <label for="name" class="form_label">Full name:</label><br>
+                                <input type="text" id="name" class="form_input" name="name" value="" placeholder="Enter your full name" required>
+                            </div>
+                            <div id="topic_form" class="form_heading short">
+                                <label for="form_topic" class="form_label">What would you like to talk about?</label><br>
+                                <select name="subject" id="form_topic">
+                                    <option value="comment">Comment on a post</option>
+                                    <option value="question">General question</option>
+                                    <option value="work">Opportunities to work together</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="long_input">
+                            <div id="email_form" class="form_heading">
+                                <label for="email" class="form_label">Enter your email address:</label>
+                                <input type="email" id="email" class="form_input" name="email" value="" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div id="large_input" class="form_heading">
+                            <label for="form_text" class="form_label">Your message:</label><br>
+                            <textarea id="form_text" name="message" class="form_input" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div id="contact_text">
+                            <h4>We aim to respond to all messages within 5 working days. Please check your emails for a response.</h4>
+                        </div>
+                        <div id="submit_div">
+                            <button type="submit">Submit Message</button>
+                        </div>
+                        <input type="hidden" name="_next" value="http://leavingthecity.c1.biz/Pages/thanks.html">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 - Leaving the City (not really, just for show!)</p>
+    </footer>
+    
+</body>
+<script src="../Scripts/script.js"></script>
+
+</html>

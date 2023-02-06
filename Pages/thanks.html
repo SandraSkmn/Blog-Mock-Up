@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaving The City - Thank You!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Licorice&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Stylesheets/thanks_style.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        type="text/css">
+    
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+</head>
+
+
+<body onload="makeDark()">
+    <div id="trim">
+        <!--Div just for styling with green trim-->
+    </div>
+    <!--Nav bar with logo and links as a list-->
+    <nav>
+        <div id="nav_contents">
+            <div id="nav_logo" class="nav_item">
+                <a href="#"><i class="fa-solid fa-leaf"></i></a>
+            </div>
+            <div id="nav_list" class="nav_item">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="dark_list"><input type="checkbox" id="toggle"><label for="toggle"></label></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="nav_space">
+        <!--Empty div to hold nav space when fully scrolled up - will be same height as nav + trim-->
+    </div>
+
+    <div id="title_section">
+        <!--Background of this div to be different image to home-->
+        <div id="title_holder">
+            <h1>Contact Us</h1>
+        </div>
+    </div>
+
+    <!--Website content and holder div (for styling)-->
+    <div id="website_body">
+        <div id="website_content">
+
+            <!--Thank you message-->
+            <div id="thanks_div">
+                <h1>Thank you for contacting us!</h1>
+                <h4>You can continue to navigate the site as normal. To return home click <a href="../index.html">here</a>.</h4>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 - Leaving the City (not really, just for show!)</p>
+    </footer>
+
+    <script src="../Scripts/script.js"></script>
+    
+</body>
+
+</html>

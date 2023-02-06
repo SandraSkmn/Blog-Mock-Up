@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaving The City - Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Licorice&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Stylesheets/blog_style.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        type="text/css">
+
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+
+</head>
+
+
+<body onload="reloadBlog(); makeDark();">
+    <div id="trim">
+        <!--Div just for styling with green trim-->
+    </div>
+    <!--Nav bar with logo and links as a list-->
+    <nav>
+        <div id="nav_contents">
+            <div id="nav_logo" class="nav_item">
+                <a href="#"><i class="fa-solid fa-leaf"></i></a>
+            </div>
+            <div id="nav_list" class="nav_item">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="dark_list"><input type="checkbox" id="toggle"><label for="toggle"></label></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="nav_space">
+        <!--Empty div to hold nav space when fully scrolled up - will be same height as nav + trim-->
+    </div>
+
+    <div id="title_section">
+        <!--Background of this div to be different image to home-->
+        <div id="title_holder">
+            <h1>Blog Posts</h1>
+        </div>
+    </div>
+
+    <!--Website content and holder div (for styling)-->
+    <div id="website_body">
+        <div id="website_content">
+
+            <!--Posts section-->
+            <div id="blog_div">
+                <div id="blog_heading">
+                    <div id='button_left' class="scroll">
+                        <input type="button" onclick="blogLeft()" value="&#60">
+                    </div>
+                    <div id="blog_data">
+                        <!--For JS to fill (h1 title, h3 author, h5 time and date)-->
+                    </div>
+                    <div id='button_right' class="scroll">
+                        <input type="button" onclick="blogRight()" value="&#62">
+                    </div>
+                </div>
+                <div id="blog_body">
+                    <div id="image_holder">
+                        <div id="image_1" class="blog_image">
+                            <!--For JS to fill as img-->
+                        </div>
+                        <div id="image_2" class="blog_image">
+                            <!--For JS to fill as img-->
+                        </div>
+                    </div>
+                    <div id="text_holder">
+                        <div id="blog_text">
+                            <!--For JS to fill (p)-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Upload section-->
+
+            <div id="upload_holder">
+                <div id="upload_title">
+                    <h2>Create a New Post</h2>
+                </div>
+                <div id="upload_form_div">
+                    <form id="upload_form_form">
+                        <div id="small_inputs">
+                            <div id="form_data">
+                                <div id="title_form" class="form_heading">
+                                    <label for="blog_title" class="form_label">Post Title:</label><br>
+                                    <input type="text" id="blog_title" class="form_input" name="blog_title" value="" placeholder="Enter a title for your post" required>
+                                </div>
+                                <div id="author_form" class="form_heading">
+                                    <label for="full_name" class="form_label">Author:</label><br>
+                                    <input type="text" id="full_name" class="form_input" name="full_name" value="" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <div id="form_images">
+                                <div id="image_1_div" class="image_div">
+                                    <label for="img1">Select first image:</label><br>
+                                    <input type="file" id="img1" name="img1" accept="image/*" required>
+                                </div>
+                                <div id="image_2_div" class="image_div">
+                                    <label for="img2">Select second image:</label><br>
+                                    <input type="file" id="img2" name="img2" accept="image/*" required>
+                                </div>
+                                <p>Note: Upload images with 1.625:1 aspect ratio for optimised display</p>
+                            </div>
+                        </div>
+                        <div id="large_input" class="form_heading">
+                            <label for="form_text" class="form_label">Post content:</label><br>
+                            <textarea id="form_text" class="form_input" placeholder="Write your blog post here!"></textarea>
+                        </div>
+                        <div id="submit_div">
+                            <input type="button" value="Submit Post" onclick="uploadBlog()">
+                        </div>
+                    </form>
+                </div>
+                <div id="clear_storage_div">
+                    <input type="button" value="Clear Locally Stored Posts" onclick="clearStorage()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <footer>
+        <p>© 2023 - Leaving the City (not really, just for show!)</p>
+    </footer>
+
+    <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/image_script.js"></script>
+    
+</body>
+
+</html>
