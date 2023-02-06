@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(251, 245, 243);
+}
+
+#trim {
+    width: 100vw;
+    height: 8px;
+    background-color: rgb(148, 170, 84);
+    position: fixed;
+    top: 0;
+}
+
+/* Nav bar styling - white space to match below*/
+
+nav {
+    height: 100px;
+    top: 8px;
+    background-color:rgb(251, 245, 243);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+}
+
+#nav_contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+    #nav_contents {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #nav_contents {
+        width: 1350px;
+    }
+}
+
+#nav_logo {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 60px;
+}
+
+#nav_logo a {
+    color:rgb(148, 170, 84);
+}
+
+#nav_list {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+}
+
+#nav_list a {
+    text-decoration: none;
+    color: rgb(42, 43, 46);
+}
+
+#nav_list a:hover {
+    font-weight: bold;
+    color: rgb(76, 76, 76);
+}
+
+#nav_list ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nav_space {
+    width: 100vw;
+    height: 108px;
+}
+
+/*Dark mode toggle styling */
+
+#dark_list {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#dark_list label {
+    background:rgb(251, 245, 243);
+    width: 45px;
+    height: 25px;
+    display: block;
+    box-shadow: inset 0 5px 10px rgb(0,0,0,0.2), inset 0 -5px 10px rgb(255,255,255,0.4);
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+#dark_list label:after {
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, rgb(224, 244, 163), rgb(148, 170, 84));
+    border-radius: 19px;
+    box-shadow: 0 5px 8px rgb(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#dark_list input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#dark_list input:checked + label {
+    background:rgb(42, 43, 46);
+}
+
+#dark_list input:checked + label:after {
+    left: 42px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, rgb(198, 110, 169), rgb(107, 42, 84));
+}
+
+
+/* General page styling - larger margins as page exceeds certain width*/
+
+#website_body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:rgb(42, 43, 46);
+}
+
+@media screen and (max-width: 1500px) {
+    #website_content {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #website_content {
+        width: 1350px;
+    }
+}
+
+/* Blog page title styling */
+
+#title_section {
+    width:100vw;
+    height: 25vh;
+    background-image: url('../Images/contactbglight.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 15px rgb(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title_holder {
+    background-color: rgb(100, 166, 189, 0.7);
+    padding: 40px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title_holder h1 {
+    font-family: 'Licorice', cursive;
+    font-size: 70px;
+    color: rgb(251, 245, 243);
+}
+
+
+/*Thanks section styling */
+
+#website_body {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: calc(75vh - 148px);
+    display: flex;
+}
+
+#thanks_div {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#thanks_div a{
+    text-decoration: none;
+    color: rgb(100, 166, 189);
+}
+
+#thanks_div a:hover{
+    text-decoration: underline;
+    color: rgb(47, 93, 109);
+}
+
+/* Footer styling */
+
+footer {
+    background-color: rgb(148, 170, 84);
+    height: 40px;
+    position: relative;
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    box-shadow: 0px -5px 15px rgb(0,0,0,0.2);
+}
+
+
+/*Dark mode styling*/
+
+/*body bg */
+.dark {
+    background-color: rgb(42, 43, 46);
+}
+
+/*Trim and nav*/
+
+.dark #trim {
+    background-color: rgb(94, 38, 66);
+}
+
+.dark nav {
+    background-color: rgb(42, 43, 46);
+}
+
+.dark #nav_logo a {
+    color:rgb(108, 128, 154);
+}
+
+.dark #nav_list a {
+    color: rgb(251, 245, 243);
+}
+
+.dark #nav_list a:hover {
+    color: rgb(137, 162, 194);
+}
+
+/*Title section */
+
+.dark #title_section {
+    background-image: url('../Images/bg1.jpeg');
+}
+
+.dark #title_holder {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(94, 38, 66, 0.7);
+}
+
+.dark #title_section {
+    box-shadow: 0px 5px 15px rgb(0,0,0, 0.9);
+}
+
+/*Main page styling */
+
+.dark #thanks_div {
+    color: rgb(251, 245, 243);
+}
+
+.dark #thanks_div a{
+    color: rgb(137, 162, 194);
+}
+
+.dark #thanks_div a:hover{
+    color: rgb(108, 128, 154);
+}
+
+
+.dark footer {
+    background-color:rgb(94, 38, 66);
+}

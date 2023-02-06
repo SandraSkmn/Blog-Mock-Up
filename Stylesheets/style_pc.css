@@ -1,0 +1,476 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(251, 245, 243);
+}
+
+#trim {
+    width: 100vw;
+    height: 8px;
+    background-color: rgb(148, 170, 84);
+    position: fixed;
+    top: 0;
+}
+
+/* Nav bar styling - white space to match below*/
+
+nav {
+    height: 100px;
+    top: 8px;
+    background-color:rgb(251, 245, 243);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+}
+
+#nav_contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+    #nav_contents {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #nav_contents {
+        width: 1350px;
+    }
+}
+
+#nav_logo {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 60px;
+}
+
+#nav_logo a {
+    color:rgb(148, 170, 84);
+}
+
+#nav_list {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+}
+
+#nav_list a {
+    text-decoration: none;
+    color: rgb(42, 43, 46);
+}
+
+#nav_list a:hover {
+    font-weight: bold;
+    color: rgb(76, 76, 76);
+}
+
+#nav_list ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nav_space {
+    width: 100vw;
+    height: 108px;
+}
+
+/*Dark mode toggle styling */
+
+#dark_list {
+    display: flex;
+    flex-direction: row;
+}
+/*I had to follow a tutorial for this bit!*/
+
+#dark_list label {
+    background:rgb(251, 245, 243);
+    width: 45px;
+    height: 25px;
+    display: block;
+    box-shadow: inset 0 5px 10px rgb(0,0,0,0.2), inset 0 -5px 10px rgb(255,255,255,0.4);
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+#dark_list label:after {
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, rgb(224, 244, 163), rgb(148, 170, 84));
+    border-radius: 19px;
+    box-shadow: 0 5px 8px rgb(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#dark_list input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#dark_list input:checked + label {
+    background:rgb(42, 43, 46);
+}
+
+#dark_list input:checked + label:after {
+    left: 42px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, rgb(198, 110, 169), rgb(107, 42, 84));
+}
+
+
+
+/* General page styling - larger margins as page exceeds certain width*/
+
+#website_body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+    #website_content {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #website_content {
+        width: 1350px;
+    }
+}
+
+/* Title section styling */
+
+#title_section {
+    width:100vw;
+    height: 50vh;
+    background-image: url('../Images/bglight1.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 15px rgb(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title_holder {
+    background-color: rgb(100, 166, 189, 0.7);
+    padding: 40px;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title_holder h1 {
+    font-family: 'Licorice', cursive;
+    font-size: 115px;
+    color: rgb(251, 245, 243);
+    padding-bottom: 20px;
+}
+
+#title_holder h3 {
+    color: rgb(251, 245, 243); 
+    font-size: 18px;
+}
+
+
+/*Website body styling */
+
+#website_body {
+    padding-top: 50px;
+}
+
+
+#website_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+
+.website_heading {
+    padding-bottom: 30px;
+    font-size: 25px;
+    color: rgb(42, 43, 46);
+}
+
+/*Recent post section styling */
+
+#recent_div {
+    width: 65%;
+}
+
+.recent_post {
+    background-color:rgb(235, 235, 235);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 28vh;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.recent_img {
+    width: 37%;
+    height: 90%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    background-color: rgb(251, 245, 243); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent_img img {
+    width: 95%;
+    height: 94%;
+    object-fit: contain;
+}
+
+.recent_text {
+    height: 90%;
+    width: 58%;
+}
+
+.post_data {
+    width: 100%;
+    height: 45%;
+}
+
+.post_content {
+    width: 100%;
+    height: 33%;
+    overflow: hidden;
+}
+
+.recent_text h2 {
+    font-size: 23px;
+}
+
+.recent_text h3 {
+    font-size: 17px;
+}
+
+.recent_text h5 {
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.link_full {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 5%;
+}
+
+.link_full a {
+    color: rgb(100, 166, 189);
+}
+
+.link_full a:hover {
+    color: rgb(60, 116, 136);
+    font-weight: bold;
+}
+
+#recent_all {
+    padding-top: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#recent_all a {
+    padding: 8px;
+    width: 150px;
+    border: none;
+    background-color:rgb(100, 166, 189);
+    color:rgb(251, 245, 243);
+    font-style: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#recent_all a:hover {
+    background-color:rgb(60, 116, 136);
+}
+
+/*About section styling */
+
+#about_div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about_title {
+    width: 100%;
+}
+
+#about_img {
+    background-image: url('../Images/me.jpg');
+    background-size: contain;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+#about_text {
+    padding-top: 30px;
+    text-align: justify;
+    color: rgb(42, 43, 46);
+}
+
+/* Footer styling */
+
+footer {
+    background-color: rgb(148, 170, 84);
+    height: 40px;
+    position: relative;
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    box-shadow: 0px -5px 15px rgb(0,0,0,0.2);
+}
+
+
+
+
+/*Dark mode styling*/
+
+/*body bg */
+.dark {
+    background-color: rgb(42, 43, 46);
+}
+
+/*Trim and nav*/
+
+.dark #trim {
+    background-color: rgb(94, 38, 66);
+}
+
+.dark nav {
+    background-color: rgb(42, 43, 46);
+}
+
+.dark #nav_logo a {
+    color:rgb(108, 128, 154);
+}
+
+.dark #nav_list a {
+    color: rgb(251, 245, 243);
+}
+
+.dark #nav_list a:hover {
+    color: rgb(137, 162, 194);
+}
+
+/*Title section */
+
+.dark #title_section {
+    background-image: url('../Images/bg3.jpg');
+}
+
+.dark #title_holder {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(94, 38, 66, 0.7);
+}
+
+.dark #title_section {
+    box-shadow: 0px 5px 15px rgb(0,0,0, 0.9);
+}
+
+/*General site section*/
+
+.dark .website_heading {
+    color: rgb(251, 245, 243);
+}
+
+/*Recent posts*/
+
+.dark .recent_post {
+    background-color:rgb(94, 38, 66, 0.8);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6), 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+    color: rgb(251, 245, 243);
+}
+
+.dark #recent_all a {
+    background-color:rgb(108, 128, 154);
+    color:rgb(251, 245, 243);
+}
+
+.dark #recent_all a:hover {
+    background-color:rgb(137, 162, 194);
+}
+
+.dark .link_full a {
+    color: rgb(137, 162, 194);
+}
+
+.dark .link_full a:hover {
+    color: rgb(108, 128, 154);
+    font-weight: bold;
+}
+
+/*About section */
+
+.dark #about_text {
+    color: rgb(251, 245, 243);
+}
+
+.dark footer {
+    background-color:rgb(94, 38, 66);
+}
+
+
+
+
+
+
+
