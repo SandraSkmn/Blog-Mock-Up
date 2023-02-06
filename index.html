@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaving The City</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Licorice&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Stylesheets/style_pc.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        type="text/css">
+
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+
+</head>
+
+
+<body onload="recentBlogs(); makeDark()">
+    <div id="trim">
+        <!--Div just for styling with green trim-->
+    </div>
+    <!--Nav bar with logo and links as a list-->
+    <nav>
+        <div id="nav_contents">
+            <div id="nav_logo" class="nav_item">
+                <a href="#"><i class="fa-solid fa-leaf"></i></a>
+            </div>
+            <div id="nav_list" class="nav_item">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Pages/blog.html">Blog</a></li>
+                    <li><a href="Pages/contact.html">Contact</a></li>
+                    <li id="dark_list"><input type="checkbox" id="toggle" onclick=""><label for="toggle"></label></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="nav_space">
+        <!--Empty div to hold nav space when fully scrolled up - will be same height as nav + trim-->
+    </div>
+
+    <div id="title_section">
+        <!--Background of this div to be forest-->
+        <div id="title_holder">
+            <h1>Leaving The City</h1>
+            <h3>Beginner Hikes | Viewing Spots | Foraging</h3>
+        </div>
+    </div>
+
+    <!--Website content and holder div (for styling)-->
+    <div id="website_body">
+        <div id="website_content">
+            <!--Title section div-->
+
+
+
+            <!--Recent posts section - on PC to be adjacent to about-->
+
+            <div id="recent_div">
+                <div id="recent_title" class="website_heading">
+                    <h2>Recent Posts</h2>
+                </div>
+                <div id="recent_1" class="recent_post">
+                    <div id="recent_1_img" class="recent_img">
+                        <!--JS to add image-->
+                    </div>
+                    <div id="recent_1_text" class="recent_text">
+                        <div class="post_data" id="data_1">
+                            <!--JS to add title (h2), author (h3) and time stamp (h5)-->
+                        </div>
+                        <div class="post_content" id="post_1">
+                            <!--JS to add post content (p)-->
+                        </div>
+                        <div class="link_full">
+                            <a href="Pages/blog.html" onclick="goOne()">Read full post →</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="recent_2" class="recent_post">
+                    <div id="recent_2_img" class="recent_img">
+                        <!--JS to add image-->
+                    </div>
+                    <div id="recent_2_text" class="recent_text">
+                        <div class="post_data" id="data_2">
+                            <!--JS to add title (h2), author (h3) and time stamp (h5)-->
+                            <!-- <h2>Surrey Hills</h2>
+                            <h3>By Sandra Sookramanien</h3>
+                            <h5>17/01/2023, 14:51</h5> -->
+                        </div>
+                        <div class="post_content" id="post_2">
+                            <!--JS to add post content (p)-->
+                        </div>
+                        <div class="link_full">
+                            <a href="Pages/blog.html" onclick="goTwo()">Read full post →</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="recent_3" class="recent_post">
+                    <div id="recent_3_img" class="recent_img">
+                        <!--JS to add image-->
+                    </div>
+                    <div id="recent_3_text" class="recent_text">
+                        <div class="post_data" id="data_3">
+                            <!--JS to add title (h2), author (h3) and time stamp (h5)-->
+                        </div>
+                        <div class="post_content" id="post_3">
+                            <!--JS to add post content (p)-->
+                        </div>
+                        <div class="link_full">
+                            <a href="Pages/blog.html" onclick="goThree()">Read full post →</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="recent_all">
+                    <a href="Pages/blog.html">See all posts</a>
+                </div>
+            </div>
+
+            <!--About section-->
+            <div id="about_div">
+                <div id="about_title" class="website_heading">
+                    <h2>About</h2>
+                </div>
+                <div id="about_img">
+                </div>
+                <div id="about_text">
+                    <p>One good thing to come out of the COVID lockdowns in 2020 was my new-found love for hiking. With
+                        limited entertainment, my family and I started exploring new places in the countryside
+                        surrounding London. What started as a day out to Box Hill in Surrey quickly spiralled into a new
+                        hobby, my adventures of which are documented here. <br><br>There's also a story behind the
+                        blog's name. While coding this site, I was listening to Joanna Newsom, an artist I discovered a
+                        few months back. 'Leaving the City' is the name of one of her songs, and I thought it fit here
+                        too!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 - Leaving the City (not really, just for show!)</p>
+    </footer>
+
+    <script src="Scripts/script.js"></script>
+
+</body>
+
+</html>
